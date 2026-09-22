@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImcApp.Maui.Views.MainPage"
+             Title=""
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="16"
+            Margin="12"
+            Padding="16"
+        >
+            <Label
+                Text="Indice de Masa Corporal"
+                FontSize="Large"
+                FontAttributes="Bold"
+                />
+            <Border
+            Margin="10"
+            Padding="20"
+            
+            StrokeThickness="2"
+            >
+            <VerticalStackLayout>
+                
+             <Label
+                Text="Proporcione el peso en kilogramos:"
+                HorizontalOptions="Fill"
+                FontSize="Medium"
+             />
+                         <Entry
+                             BackgroundColor="LightGray"
+                             x:Name="PesoLabel"
+                             
+                             Keyboard="Numeric"
+                             />
+            
+            <Label
+                Text="Proporcione la estatura en metros:"
+                HorizontalOptions="Fill"
+                FontSize="Medium"
+             />      
+                          <Entry
+                             BackgroundColor="LightGray"
+                              x:Name="EstaturaLabel"
+                              
+                             Keyboard="Numeric"
+                              />
+                
+            </VerticalStackLayout>
+        </Border>
+
+
+        <HorizontalStackLayout
+            Spacing="50"
+            Padding="5"
+            HorizontalOptions="Center" 
+            >
+            <Button 
+               Text="Calcular"
+               MinimumWidthRequest="50"
+               FontSize="Medium"
+                
+                Clicked="OnButtonClicked"    
+                    />
+            <Button 
+                Text="Limpiar"
+                MinimumWidthRequest="50"
+                FontSize="Medium" 
+                
+                Clicked="OnLimpiarButtonClicked"
+                 />
+        </HorizontalStackLayout>
+
+
+        <Border
+            Margin="10"
+            Padding="20"
+            StrokeThickness="2"
+            >
+
+            <VerticalStackLayout>
+                <Label
+                    Text="El indice de masa corporal es:"
+                    HorizontalOptions="Fill"
+                    FontSize="Medium"
+                 />
+                <Label
+                    Text="23.5"
+                    HorizontalOptions="Center"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    
+                    x:Name="ImcLabel"
+                 />
+                       <!--Fontsize es el tamaño de letra-->
+
+                <Label
+                     Text="El estasdo nutricional de la persona es"
+                     HorizontalOptions="Fill"
+                     FontSize="Medium"
+                 />
+
+                <Label
+                     Text="Peso normal"
+                     HorizontalOptions="Center"
+                     FontSize="Large"
+                     FontAttributes="Bold"
+                    
+                    x:Name="PesoNutriLabel"
+                    />
+            </VerticalStackLayout>
+            
+        </Border>
+       
+    </VerticalStackLayout>
+    
+   <!--vertical layout
+        border 
+            vertical layout
+                laberl
+                entry
+                label
+                entry
+    
+        Horizontal layout
+            button
+            button
+    
+        border
+             Vertical layout
+                label 
+                label-->
+
+    </ScrollView>
+</ContentPage>
